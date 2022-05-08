@@ -8,13 +8,13 @@
  *                                                                                                 *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
 
-// * * * * * * * * * * * * * Import externals
-const pick = require('@esultocom/node-server-util-pick');
-const ApiError = require('@esultocom/node-server-util-apierror');
+// > > > > > > > > > > > > > > > > > > > > > > > Import externals
+const pick = require('@digidockage/node-server-util-pick');
+const ApiError = require('@digidockage/node-server-util-apierror');
 const httpStatus = require('http-status');
 const Joi = require('joi');
 
-// * * * * * * * * * * * * * The code
+// > > > > > > > > > > > > > > > > > > > > > > > The code
 const validate = (schema) => (req, res, next) => {
   const validSchema = pick(schema, ['params', 'query', 'body']);
   const object = pick(req, Object.keys(validSchema));
@@ -30,5 +30,5 @@ const validate = (schema) => (req, res, next) => {
   return next();
 };
 
-// * * * * * * * * * * * * * Module exports
+// > > > > > > > > > > > > > > > > > > > > > > > Module exports
 module.exports = validate;

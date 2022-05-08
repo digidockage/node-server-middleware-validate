@@ -3,5 +3,5 @@ Nodejs common server middleware validate.
 
 ### Install
 ```
-npm install @esultocom/node-server-middleware-validate
+npm install @digidockage/node-server-middleware-validate
 ```
